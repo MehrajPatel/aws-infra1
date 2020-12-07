@@ -1,11 +1,13 @@
-# terraform {
-#   required_providers {
-#     aws={
-#         source="hashicorp/aws"
-#         version="~>2.70"
-#     }
-#   }
-# }
+terraform {
+  required_version = "~>0.12"
+  backend "remote" {
+    organization = "mehrajpatel"
+
+    workspaces {
+      name = "aws-infra1"
+    }
+  }
+}
 provider "aws" {
   profile    = "default"
   region     = var.region
