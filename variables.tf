@@ -10,6 +10,15 @@ variable "amis" {
   }
 }
 
+variable "aws_access_key_id" {
+  type = string
+}
+
+variable "aws_secret_access_key" {
+  type      = string
+  sensitive = true
+}
+
 output "ami" {
-    value=aws_instance.firstinstance.ami
+  value = aws_instance.firstinstance.ami
 }
