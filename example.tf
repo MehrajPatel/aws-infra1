@@ -11,8 +11,8 @@ terraform {
 provider "aws" {
   profile    = "default"
   region     = var.region
-  access_key = var.aws_access_key_id
-  secret_key = var.aws_secret_access_key
+  access_key = var.TF_VAR_aws_access_key_id
+  secret_key = var.TF_VAR_aws_secret_access_key
 }
 resource "aws_instance" "firstinstance" {
   ami           = var.amis[var.region]
