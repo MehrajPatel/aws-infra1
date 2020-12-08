@@ -6,7 +6,7 @@ variable "amis" {
   type = map
   default = {
     "us-east-1" = "ami-04d29b6f966df1537"
-    "us-west-1" = "ami-08d9a394ac1c2994c"
+    "us-west-1" = "ami-00831fc7c1e3ddc60"
   }
 }
 
@@ -15,7 +15,7 @@ variable "aws_access_key_id" {
 }
 
 variable "aws_secret_access_key" {
-  type      = string
+  type = string
 }
 
 output "ami" {
