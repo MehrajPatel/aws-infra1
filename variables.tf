@@ -33,6 +33,6 @@ variable "aws_secret_access_key" {
 }
 
 output "ami" {
-  value = aws_instance.firstinstance.ami
+  value = aws_instance.web.ami
 }
 
